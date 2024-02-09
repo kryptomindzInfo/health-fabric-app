@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PHR Blockchain! | </title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-wysiwyg -->
+  <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+  <!-- Select2 -->
+  <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+  <!-- Switchery -->
+  <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+  <!-- starrr -->
+  <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <!-- bootstrap-datetimepicker -->
+  <link href="../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+  <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+  <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+  <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+  <link href="../build/css/addon.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="phr_doctor.html" class="site_title">
+              <img src="images/logo-white.png" width="25" height="25"></img>
+              <span>Healthcare Demo</span>
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/doctor.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2 id="welcome_name">Viewer</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>Menu </h3>
+              <ul class="nav side-menu">
+                <li>
+                  <a>
+                    <i class="fa fa-home"></i> Home
+                    <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li>
+                      <a href="phr_doctor.html"> Dashboard </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="images/doctor.png" alt=""> Viewer
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li>
+                    <a href="javascript:;"> Profile</a>
+                  </li>
+                  <li>
+                    <a href="login.html">
+                      <i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                  <li>
+                    <a>
+                      <span class="image">
+                        <img src="images/img.jpg" alt="Profile Image" />
+                      </span>
+                      <span>
+                        <span>Delvin</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Recent Comments...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span class="image">
+                        <img src="images/img.jpg" alt="Profile Image" />
+                      </span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Recent comments...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="text-center">
+                      <a>
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3 id="header_name">Record of Patient Name: ...</h3>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Patient Details
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                        <a class="collapse-link">
+                          <i class="fa fa-chevron-up"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+                  <div class="x_content">
+                    <!-- start project list -->
+                    <table class="table table-striped projects">
+                      <thead>
+                        <tr>
+                          <th style="width: 1%">#</th>
+                          <th style="width: 20%">Patient's Name</th>
+                          <th style="width: 20%" id="patient_name">...</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a>Age</a>
+                          </td>
+                          <td>
+                            <a id="patient_age">...</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a>Gender</a>
+                          </td>
+                          <td>
+                            <a id="patient_gender">...</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>#</td>
+                          <td>
+                            <a>Patient ID</a>
+                          </td>
+                          <td>
+                            <a id="patient_id">...</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- end project list -->
+                  </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- Prescription add content -->
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Prescriptions
+                    </h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <!-- start project list -->
+                    <div id='prescription_list'></div>
+                    <!-- end project list -->
+                  </div>
+                </div>
+                <!-- //Prescription add content -->
+
+                <div class="clearfix"></div>
+
+                <!-- Reports content -->
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Test Reports
+                    </h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <!-- start project list -->
+                    <div id='report_list'></div>
+
+                    <!-- <button type="button" class="btn btn-info btn-xs">Blood Report</button> -->
+                    <!-- <button type="button" class="btn btn-info btn-xs"  data-toggle="modal" data-target=".bs-xray-modal-lg">X-ray Report</button> -->
+                    <!-- <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target=".bs-upload-modal-lg">Upload</button> -->
+
+                    <!-- <button disabled type="button" class="btn btn-warning btn-xs">Sugar Report</button> -->
+                    <!-- end project list -->
+                  </div>
+                </div>
+                <!-- /Reports content -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Prescription Large modal -->
+      <div class="modal fade bs-prescription-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Prescription</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <div id="alerts"></div>
+                <div class="control-group">
+                  <label class="control-label col-md-1 col-sm-1 col-xs-12">Drugs</label>
+                  <div class="col-md-11 col-sm-11 col-xs-12">
+                    <input id="tags_1" type="text" class="tags form-control" value="" />
+                    <div id="suggestions-container"
+                      style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font">
+                    <i class="fa fa-font"></i>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size">
+                    <i class="fa fa-text-height"></i>&nbsp;
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a data-edit="fontSize 5">
+                        <p style="font-size:17px">Huge</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a data-edit="fontSize 3">
+                        <p style="font-size:14px">Normal</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a data-edit="fontSize 1">
+                        <p style="font-size:11px">Small</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)">
+                    <i class="fa fa-bold"></i>
+                  </a>
+                  <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)">
+                    <i class="fa fa-italic"></i>
+                  </a>
+                  <a class="btn" data-edit="strikethrough" title="Strikethrough">
+                    <i class="fa fa-strikethrough"></i>
+                  </a>
+                  <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)">
+                    <i class="fa fa-underline"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="insertunorderedlist" title="Bullet list">
+                    <i class="fa fa-list-ul"></i>
+                  </a>
+                  <a class="btn" data-edit="insertorderedlist" title="Number list">
+                    <i class="fa fa-list-ol"></i>
+                  </a>
+                  <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)">
+                    <i class="fa fa-dedent"></i>
+                  </a>
+                  <a class="btn" data-edit="indent" title="Indent (Tab)">
+                    <i class="fa fa-indent"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)">
+                    <i class="fa fa-align-left"></i>
+                  </a>
+                  <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)">
+                    <i class="fa fa-align-center"></i>
+                  </a>
+                  <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)">
+                    <i class="fa fa-align-right"></i>
+                  </a>
+                  <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)">
+                    <i class="fa fa-align-justify"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink">
+                    <i class="fa fa-link"></i>
+                  </a>
+                  <div class="dropdown-menu input-append">
+                    <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                    <button class="btn" type="button">Add</button>
+                  </div>
+                  <a class="btn" data-edit="unlink" title="Remove Hyperlink">
+                    <i class="fa fa-cut"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)">
+                    <i class="fa fa-undo"></i>
+                  </a>
+                  <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)">
+                    <i class="fa fa-repeat"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div id="editor-one" class="editor-wrapper"></div>
+
+              <div class="clearfix"></div>
+              <br />
+
+              <div class='col-sm-6'>
+                Refill
+                <div class="form-group">
+                  <div class='input-group contact'>
+                    <select id="refill" class="form-control">
+                      <option>No Refill</option>
+                      <option>One Time</option>
+                      <option>Two Time</option>
+                      <option>Three Time</option>
+                      <option>Four Time</option>
+                      <option>Five Time</option>
+                      <option>Six Time</option>
+                    </select>
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-refresh"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class='col-sm-6'>
+                Void After
+                <div class="form-group">
+                  <div class='input-group date' id='myDatepicker2'>
+                    <input id="void_after" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="submit" type="button" onClick="addPrescription()" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- /Prescription Modal End -->
+
+      <!-- XRAY Large modal -->
+      <div class="modal fade bs-xray-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">X-Ray Report</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <div id="alerts"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Type</label>
+                  <div class="col-sm-5">
+                    <select id="xray_type" class="form-control">
+                      <option>Chest</option>
+                      <option>Knee</option>
+                      <option>Arm</option>
+                      <option>Shoulder</option>
+                      <option>Brain</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Date</label>
+                  <div class='input-group date col-sm-5' id='myDatepicker3'>
+                    <input id="xray_date" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Ref Doctor</label>
+                  <div class="col-sm-5">
+                    <input id="ref_doc" type="text" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Code ID</label>
+                  <div class='input-group col-sm-5'>
+                    <input id="code_id" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-adjust"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+
+              <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font">
+                    <i class="fa fa-font"></i>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size">
+                    <i class="fa fa-text-height"></i>&nbsp;
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a data-edit="fontSize 5">
+                        <p style="font-size:17px">Huge</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a data-edit="fontSize 3">
+                        <p style="font-size:14px">Normal</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a data-edit="fontSize 1">
+                        <p style="font-size:11px">Small</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)">
+                    <i class="fa fa-bold"></i>
+                  </a>
+                  <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)">
+                    <i class="fa fa-italic"></i>
+                  </a>
+                  <a class="btn" data-edit="strikethrough" title="Strikethrough">
+                    <i class="fa fa-strikethrough"></i>
+                  </a>
+                  <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)">
+                    <i class="fa fa-underline"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="insertunorderedlist" title="Bullet list">
+                    <i class="fa fa-list-ul"></i>
+                  </a>
+                  <a class="btn" data-edit="insertorderedlist" title="Number list">
+                    <i class="fa fa-list-ol"></i>
+                  </a>
+                  <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)">
+                    <i class="fa fa-dedent"></i>
+                  </a>
+                  <a class="btn" data-edit="indent" title="Indent (Tab)">
+                    <i class="fa fa-indent"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)">
+                    <i class="fa fa-align-left"></i>
+                  </a>
+                  <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)">
+                    <i class="fa fa-align-center"></i>
+                  </a>
+                  <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)">
+                    <i class="fa fa-align-right"></i>
+                  </a>
+                  <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)">
+                    <i class="fa fa-align-justify"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink">
+                    <i class="fa fa-link"></i>
+                  </a>
+                  <div class="dropdown-menu input-append">
+                    <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                    <button class="btn" type="button">Add</button>
+                  </div>
+                  <a class="btn" data-edit="unlink" title="Remove Hyperlink">
+                    <i class="fa fa-cut"></i>
+                  </a>
+                </div>
+
+                <div class="btn-group">
+                  <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)">
+                    <i class="fa fa-undo"></i>
+                  </a>
+                  <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)">
+                    <i class="fa fa-repeat"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div id="editor-two" class="editor-wrapper"></div>
+
+              <div class="clearfix"></div>
+              <br />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="submit_xray" type="button" onClick="addXRay()" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- /XRAY Modal End -->
+
+      <!-- UPLOAD Large modal -->
+      <div class="modal fade bs-upload-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Upload Scan Report</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <div id="alerts"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Type</label>
+                  <div class="col-sm-5">
+                    <select id="report_type" class="form-control">
+                      <option>Pathology</option>
+                      <option>Radiology</option>
+                      <option>Hematology</option>
+                      <option>Prescription</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Date</label>
+                  <div class='input-group date col-sm-5' id='myDatepicker4'>
+                    <input id="report_date" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Report Name</label>
+                  <div class="col-sm-5">
+                    <input id="report_name" type="text" class="form-control" value="" />
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label class="control-label col-sm-1">Ref Doc</label>
+                  <div class='input-group col-sm-5'>
+                    <input id="ref_doc_upload" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-user"></span>
+                    </span>
+                  </div>
+                </div>
+
+
+                <div hidden class="control-group">
+                  <label class="control-label col-sm-1">Code ID</label>
+                  <div class='input-group col-sm-5'>
+                    <input id="code_id_upload" type='text' value="AK-400" class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-adjust"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <br />
+              <div class="divider"></div>
+              <div id="upload_group" class="control-group">
+                <label class="control-label col-sm-2">Upload File</label>
+                <div class='input-group col-sm-10'>
+                  <input id="upload_file" type='file' value="" class="form-control" />
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-file"></span>
+                  </span>
+                </div>
+              </div>
+              <div id="download_group" class="control-group">
+                <label class="control-label col-sm-2">Uploaded Report</label>
+                <div class='input-group col-sm-10'>
+                  <a href="#" id="download_file" type="button" class="btn btn-info btn"
+                    data-dismiss="modal">Download/View Report</a>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+              <br />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="submit_upload" type="button" onClick="uploadReport()" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- /UPLOAD Modal End -->
+
+      <!-- /page content -->
+      <div class="modal fade bd-progress-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content" style="display: flex; justify-content: center;">
+            <span class="fa fa-spinner fa-spin fa-3x"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-left">
+          <a type="button" class="btn btn-success btn-xs" href="phr_admin_dash.html">PHR-Admin</a>
+          <a type="button" class="btn btn-warning btn-xs" href="phr_patient.html">Patient</a>
+          <a type="button" class="btn btn-info btn-xs" href="phr_doctor.html">Doctor</a>
+        </div>
+        <div class="pull-right">
+          Gentelella - Bootstrap Admin Template by
+          <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+  <!-- bootstrap-progressbar -->
+  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+  <!-- iCheck -->
+  <script src="../vendors/iCheck/icheck.min.js"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="../vendors/moment/min/moment.min.js"></script>
+  <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap-datetimepicker -->
+  <script src="../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <!-- bootstrap-wysiwyg -->
+  <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+  <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+  <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+  <!-- jQuery Tags Input -->
+  <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+  <!-- Switchery -->
+  <script src="../vendors/switchery/dist/switchery.min.js"></script>
+  <!-- Select2 -->
+  <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+  <!-- Parsley -->
+  <!-- <script src="../vendors/parsleyjs/dist/parsley.min.js"></script> -->
+  <!-- Autosize -->
+  <script src="../vendors/autosize/dist/autosize.min.js"></script>
+  <!-- jQuery autocomplete -->
+  <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+  <!-- starrr -->
+  <script src="../vendors/starrr/dist/starrr.js"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+
+  <!-- PNotify -->
+  <script src="../vendors/pnotify/dist/pnotify.js"></script>
+  <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+  <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+  <script src="../production/js/ipfs/ipfs.js"></script>
+  <script src="../production/js/ipfs/ipfs-api.js"></script>
+
+  <!-- PHR Admin JS methods -->
+  <script src="../production/js/app/utils.js"></script>
+  <script src="../production/js/app/patient_only.js"></script>
+  <script src="../production/js/app/constants.js"></script>
+
+  <script>
+    $('#myDatepicker2').datetimepicker({
+      format: 'YYYY-MM-DD',
+      ignoreReadonly: true,
+      allowInputToggle: true
+    });
+    $('#myDatepicker3').datetimepicker({
+      format: 'YYYY-MM-DD',
+      ignoreReadonly: true,
+      allowInputToggle: true
+    });
+    $('#myDatepicker4').datetimepicker({
+      format: 'YYYY-MM-DD',
+      ignoreReadonly: true,
+      allowInputToggle: true
+    });
+  </script>
+</body>
+
+</html>

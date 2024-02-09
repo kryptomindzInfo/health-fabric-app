@@ -1,0 +1,27 @@
+Youtube Video:
+https://youtu.be/_t-5P0USuqM
+
+
+Hi Mustafa,
+
+Thank you for the video. My feedback is broken down by dashboard:
+
+Admin Dash Board. 
+Would like to see a How Many Documents button alongside the "Revoked" button. 
+This should show the total number of documents that have been uploaded..
+
+Doctor Dash Board. 
+On the doctors dashboard they should have a set of blank forms, ie. Perscriptions, 
+Bllod test, xray report etc. For now we could just go with these three. 
+I'm thinking I should send you the fields like when they fill out a contact form. 
+The the "Reports" would be all of the forms theyve filled out.
+
+Patient Dashboard: 
+they would see a list of uploaded reports (forms that have been filled out by the patient or doctor) and as you have, 
+they would be able to share with a doc or another member. 
+They should also have the ability to upload 
+(really create an additional report via a form just like the doctors have) 
+if for example they have an old blood report or old perscriptions they would like to add to 
+their account they could manually enter them in.
+
+I will send you the fields for each form/report tonight.

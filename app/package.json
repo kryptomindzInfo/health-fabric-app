@@ -1,0 +1,36 @@
+{
+  "name": "phr-app",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric PHR Aplication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "nodemon": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cfenv": "^1.2.4",
+    "connect-busboy": "^1.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "date-format": "^4.0.14",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-bearer-token": "^2.4.0",
+    "express-jwt": "^8.4.1",
+    "fabric-ca-client": "^2.2.18",
+    "fabric-network": "^2.2.18",
+    "fs": "^0.0.1-security",
+    "grpc": "^1.24.11",
+    "nodemailer": "6.9.3",
+    "os": "^0.1.2",
+    "path": "^0.12.7"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Hyperledger",
+    "Fabric",
+    "Application"
+  ]
+}

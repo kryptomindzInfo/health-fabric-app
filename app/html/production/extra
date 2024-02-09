@@ -1,0 +1,89 @@
+style="display: flex; justify-content: center;padding:20px; border: 3px solid green; height:150px; width: 150px"
+
+
+
+                    <div class='col-sm-6'>
+                      Doctor's First Name
+                      <div class="form-group">
+                          <div class='input-group contact' id='myDatepicker'>
+                              <input type='text' id="first-name" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-user"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class='col-sm-6'>
+                    Doctor's Last Name
+                    <div class="form-group">
+                          <div class='input-group date' id='myDatepicker2'>
+                              <input type='text' id="last-name" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-user"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class='col-sm-6'>
+                    Email
+                    <div class="form-group">
+                          <div class='input-group date' id='myDatepicker2'>
+                              <input type='text' id="email" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-envelope"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class='col-sm-6'>
+                    License Number
+                    <div class="form-group">
+                      <div class='input-group'>
+                        <input type='text' id="license" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-qrcode"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class='col-sm-12'>
+                    <div class="form-group ln_solid"></div>
+                    Address
+                    <div class="form-group">
+                          <div class='input-group'>
+                              <input type='text' id="address" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-home"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class='col-sm-6'>
+                    State
+                    <div class="form-group">
+                          <div class='input-group'>
+                              <input type='text' id="state" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-globe"></span>
+                              </span>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class='col-sm-6'>
+                    City
+                    <div class="form-group">
+                          <div class='input-group'>
+                              <input type='text' id="city" required="required" class="form-control" />
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-globe"></span>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+                  

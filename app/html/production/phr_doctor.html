@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PHR Blockchain! | </title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Bootstrap -->
+  <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-wysiwyg -->
+  <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+  <!-- Select2 -->
+  <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+  <!-- Switchery -->
+  <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+  <!-- starrr -->
+  <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+  <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+  <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="../build/css/custom.min.css" rel="stylesheet">
+  <link href="../build/css/addon.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="phr_doctor.html" class="site_title">
+              <img src="images/logo-white.png" width="25" height="25"></img>
+              <span>Healthcare Demo</span>
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="images/doctor.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Doctor</h2>
+            </div>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>Menu </h3>
+              <ul class="nav side-menu">
+                <li>
+                  <a>
+                    <i class="fa fa-home"></i> Home
+                    <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li>
+                      <a href="phr_doctor.html"> Dashboard </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>
+                    <i class="fa fa-edit"></i> Action
+                    <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li>
+                      <a href="shared_records.html"> View Shared Records </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="images/doctor.png" alt=""> Doctor
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li>
+                    <a href="javascript:;"> Profile</a>
+                  </li>
+                  <li>
+                    <a href="login.html">
+                      <i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li role="presentation" class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="badge bg-green">6</span>
+                </a>
+                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                  <li>
+                    <a>
+                      <span class="image">
+                        <img src="images/img.jpg" alt="Profile Image" />
+                      </span>
+                      <span>
+                        <span>Delvin</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Recent Comments...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span class="image">
+                        <img src="images/img.jpg" alt="Profile Image" />
+                      </span>
+                      <span>
+                        <span>John Smith</span>
+                        <span class="time">3 mins ago</span>
+                      </span>
+                      <span class="message">
+                        Document comments...
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="text-center">
+                      <a>
+                        <strong>See All Alerts</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div class="page-title">
+            <div class="title_left">
+              <h3>Manage Patients</h3>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Enroll New Patient
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                        <a class="collapse-link">
+                          <i class="fa fa-chevron-down red" id="add_patient_i"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+                  <div class="x_content" id="add_patient">
+                    <div class='col-sm-6'>
+                      Patient's First Name
+                      <div class="form-group">
+                        <div class='input-group contact'>
+                          <input type='text' id="first-name" required="required" class="form-control" value="Patient" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-6'>
+                      Patient's Last Name
+                      <div class="form-group">
+                        <div class='input-group contact'>
+                          <input type='text' id="last-name" required="required" class="form-control" value="Husain" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-6'>
+                      Email
+                      <div class="form-group">
+                        <div class='input-group contact'>
+                          <input type='text' id="email" required="required" class="form-control" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-6'>
+                      Year of Birth
+                      <div class="form-group">
+                        <div class='input-group'>
+                          <input type='text' id="birth_year" required="required" class="form-control" value="1998" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-qrcode"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-12'>
+                      Gender
+                      <div class="form-group">
+                        <div class='input-group left'>
+                          <select id="gender" required="required" class="form-control">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select>
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-12'>
+                      <div class="form-group ln_solid"></div>
+                      Address
+                      <div class="form-group">
+                        <div class='input-group'>
+                          <input type='text' id="address" required="required" class="form-control"
+                            value="B2, Omar Housing Society" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-home"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-6'>
+                      State
+                      <div class="form-group">
+                        <div class='input-group'>
+                          <input type='text' id="state" required="required" class="form-control" value="Maharashtra" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-globe"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class='col-sm-6'>
+                      City
+                      <div class="form-group">
+                        <div class='input-group'>
+                          <input type='text' id="city" required="required" class="form-control" value="Nagpur" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-globe"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                      <div class="form-group">
+                        <div class="ln_solid"></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button"> Cancel </button>
+                          <button type="button" onClick="addPatient()" class="btn btn-success"> Add Patient </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="title_left">
+                  <h3>Patients List</h3>
+                </div>
+
+
+                <div class="title_right">
+                  <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                      <input id="search" type="text" class="form-control" placeholder="Search Patient...">
+                      <span class="input-group-btn">
+                        <button onclick="searchPatient()" class="btn btn-default" type="button">Go!</button>
+                      </span>
+                      <span class="input-group-btn">
+                        <button onclick="showQRModal()" class="btn btn-default" type="button"><i
+                            class="fa fa-qrcode blue"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> List of Patients
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                        <a class="collapse-link">
+                          <i class="fa fa-chevron-up"></i>
+                        </a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                          aria-expanded="false"><i class="fa fa-search red"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a onclick="showFussyModal()"><i class="fa fa-puzzle-piece blue"></i> Fussy Search...</a>
+                          </li>
+                          <li><a onclick="showEmergencyModal()"><i class="fa fa-ambulance red"></i> Emergency
+                              Search...</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+
+
+
+
+                  <div class="x_content">
+                    <!-- start project list -->
+                    <div id="patient_list"></div>
+                    <!-- end project list -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /page content -->
+      <div class="modal fade bd-progress-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content" style="display: flex; justify-content: center;">
+            <span class="fa fa-spinner fa-spin fa-3x"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fussy LARGE modal -->
+      <div class="modal fade bs-fussy-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Fussy Find</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <br />
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Mobile Number</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Email</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Name</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="Patient-1" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Year Of Birth</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="" />
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="divider"></div>
+                <div class="clearfix"></div>
+                <br />
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="submit_upload" type="button" onClick="fussySearch()" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Fussy Modal End -->
+
+      <!-- Fussy LARGE modal -->
+      <div class="modal fade bs-qr-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">QR Scan</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <br />
+                <div class="control-group">
+                  <img style="display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80%;" src="images/scan.gif" />
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="divider"></div>
+                <div class="clearfix"></div>
+                <br />
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="submit_upload" type="button" onClick="qrSearch()" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Fussy Modal End -->
+
+      <!-- Fussy LARGE modal -->
+      <div class="modal fade bs-bio-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Biometric Scan</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <br />
+                <div class="control-group">
+                  <img style="display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 80%;" src="images/fingerprint2.gif" />
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="divider"></div>
+                <div class="clearfix"></div>
+                <br />
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="submit_upload" type="button" disabled onClick="" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Fussy Modal End -->
+
+
+      <!-- Fussy LARGE modal -->
+      <div class="modal fade bs-emergency-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Emergency Search</h4>
+            </div>
+            <div class="modal-body">
+              <div class="x_content">
+                <br />
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Mobile Number</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="9873062228" />
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Licence Number</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="MH32-5153" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Name</label>
+                  <div class="col-sm-8">
+                    <input id="report_name" type="text" class="form-control" value="Patient-1" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label col-sm-4">Biometric Scan</label>
+                  <div class="col-sm-8">
+                    <button type="button" onclick="showBioModal()" class="btn btn-danger">Scan</button>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="divider"></div>
+                <div class="clearfix"></div>
+                <br />
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="submit_upload" type="button" disabled onClick="fussySearch()"
+                  class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Fussy Modal End -->
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-left">
+          <a type="button" class="btn btn-success btn-xs" href="phr_admin_dash.html">PHR-Admin</a>
+          <a type="button" class="btn btn-warning btn-xs" href="phr_patient.html">Patient</a>
+          <a type="button" class="btn btn-info btn-xs" href="phr_doctor.html">Doctor</a>
+        </div>
+        <div class="pull-right">
+          Gentelella - Bootstrap Admin Template by
+          <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="../vendors/nprogress/nprogress.js"></script>
+  <!-- bootstrap-progressbar -->
+  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+  <!-- iCheck -->
+  <script src="../vendors/iCheck/icheck.min.js"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="../vendors/moment/min/moment.min.js"></script>
+  <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap-wysiwyg -->
+  <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+  <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+  <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+  <!-- jQuery Tags Input -->
+  <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+  <!-- Switchery -->
+  <script src="../vendors/switchery/dist/switchery.min.js"></script>
+  <!-- Select2 -->
+  <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+  <!-- Parsley -->
+  <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+  <!-- Autosize -->
+  <script src="../vendors/autosize/dist/autosize.min.js"></script>
+  <!-- jQuery autocomplete -->
+  <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+  <!-- starrr -->
+  <script src="../vendors/starrr/dist/starrr.js"></script>
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
+
+  <!-- PHR Admin JS methods -->
+  <script src="../production/js/app/utils.js"></script>
+  <script src="../production/js/app/doctor.js"></script>
+  <script src="../production/js/app/constants.js"></script>
+
+  <!-- PNotify -->
+  <script src="../vendors/pnotify/dist/pnotify.js"></script>
+  <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+  <script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+</body>
+
+</html>
